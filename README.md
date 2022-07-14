@@ -14,6 +14,7 @@ Run the command to print: <b>Code.education Rocks!</b>
 docker run kalilmvp/codeeducation
 ```
 
+The image was also built using multistage so the PROD image is really small and only executes what's necessary. Image size: 1.76MB
 
 
 

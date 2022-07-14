@@ -1,0 +1,11 @@
+FROM golang:1.18 AS builder
+
+WORKDIR /usr/src/app
+
+COPY ./go_hello/hello-world .
+
+WORKDIR /usr/src/app
+
+FROM scratch
+COPY --from=builder /usr/src/app .
+CMD ["./hello-world"]
